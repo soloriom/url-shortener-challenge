@@ -11,6 +11,6 @@ const uri = `mongodb://${Mongo.HOST}:${Mongo.PORT}/${Mongo.NAME}`;
   pass: Mongo.PASS
 }
  */
-const db = mongoose.createConnection(uri);
+const db = mongoose.createConnection(uri,{useMongoClient: true});
 
 module.exports = db;
