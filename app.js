@@ -7,6 +7,8 @@ const url = require('./app/url/routes');
 
 const app = express();
 
+//morgan was used for development purposes
+//it can be either disabled or given a diferent option for the logs on production. 
 app.use(morgan('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
